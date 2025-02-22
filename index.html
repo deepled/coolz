@@ -14,11 +14,7 @@
             min-height: 100vh;
             background-color: #f5f5f5;
         }
-        .image-container {
-            max-width: 100%;
-            padding: 10px;
-        }
-        .image-container img {
+        img {
             width: 100%;
             height: auto;
             display: block;
@@ -26,8 +22,12 @@
     </style>
 </head>
 <body>
-    <div class="image-container">
+    <picture>
+        <!-- Mobile Image (loaded when screen width is 768px or smaller) -->
+        <source srcset="https://s3.gifyu.com/images/bS6k5.png" media="(max-width: 768px)">
+        
+        <!-- Default Image (for desktops and larger screens) -->
         <img src="https://s3.gifyu.com/images/bS4K5.png" alt="coolz">
-    </div>
+    </picture>
 </body>
 </html>
